@@ -8,12 +8,22 @@
 </head>
 <body>
     <?php
+    // Write a Program to display count, from 5 to 15 using PHP loop as given below.
      $count = 4;
      for($i = 0 ; $i <= 10 ; $i++) {
          global $count;
          $count++;
          echo $count . '<br>';
      }
+    ?>
+    <br>
+    <?php
+    //  Write a program to perform sum or addition of two numbers in PHP programming.
+    $a = 5;
+    $b = 10;
+    echo $a + $b;
+
+     
     ?>
 </body>
 </html>
