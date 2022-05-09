@@ -51,6 +51,37 @@
       }
       studentGrade(90,0,90,90,100);
     ?>
-
+    <?php
+    //Write a program to show day of the week (for example: Monday) based on numbers using switch/case statements.
+    function weekDay($num) {
+        switch($num) {
+            case 1:
+                echo "Monday";
+                break;
+            case 2:
+                echo "Tuesday";
+                break;
+            case 3:
+                echo "Wednesday";
+                 break;
+            case 4:
+                echo "Thursday";
+                break;
+            case 5:
+                echo "Friday";
+                 break;
+            case 6:
+                echo "Saturday";
+                break;
+            case 7:
+                echo "Sundayday";
+                break;
+            default:
+                echo "Invalid Number";
+        }
+       
+    }
+    weekDay(rand(1,10));
+    ?>
 </body>
 </html>
