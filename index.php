@@ -95,7 +95,7 @@
      }
      factorial(rand(1,10));
     ?>
-  
+  <!-- Write a PHP program using nested for loop that creates a chess board. -->
      <table width="400px"  border ="1px" style="border-collapse:collapse">
     <?php
       
