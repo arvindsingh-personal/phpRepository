@@ -27,5 +27,13 @@
     $text = "PHP";
     echo "Welcome to the $text World";
     ?>
+    <br>
+    <?php
+      //     Write a program to print 2 php variables using single echo statement.
+     $message_1 = "Hello";
+     $message_2 = "Good Evening";
+     echo $message_1." ".$message_2;
+    ?>
+
 </body>
 </html>
