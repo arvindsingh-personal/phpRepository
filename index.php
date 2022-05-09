@@ -82,6 +82,18 @@
        
     }
     weekDay(rand(1,10));
+    ?><br><br>
+    <?php
+    //Write a program to calculate factorial of a number using for loop in php.
+     function factorial($num) {
+         $fact = 1;
+         for($i = 1 ;$i <= $num ;$i++) {
+           $fact *= $i; 
+         }
+         echo $fact;
+     }
+     factorial(rand(1,10));
     ?>
+
 </body>
 </html>
