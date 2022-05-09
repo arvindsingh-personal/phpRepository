@@ -90,10 +90,30 @@
          for($i = 1 ;$i <= $num ;$i++) {
            $fact *= $i; 
          }
+         
          echo $fact;
      }
      factorial(rand(1,10));
     ?>
+  
+     <table width="400px"  border ="1px" style="border-collapse:collapse">
+    <?php
+      
+      for($i = 0 ; $i < 8 ; $i++){
+        echo "<tr>";
+         for($j = 0 ; $j < 8 ; $j++) {
+             if(($i + $j)%2 == 0) {
+                 echo "<td height='30px' width='30px' bgcolor='white'></td>";
+             }
+             else {
+                echo "<td height='30px' width='30px' bgcolor='black'></td>";
+             }
 
+         }
+         echo "</tr>";
+      }
+    ?>
+
+  </table>
 </body>
 </html>
