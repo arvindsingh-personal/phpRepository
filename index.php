@@ -33,6 +33,23 @@
      $message_1 = "Hello";
      $message_2 = "Good Evening";
      echo $message_1." ".$message_2;
+    ?><br><br>
+    <?php
+      //Write a program to check student grade based on the marks using if-else statement.
+      function studentGrade($English, $Social, $Maths, $Physics, $Chemistry) {
+           $Sum = ($English + $Social + $Maths + $Physics + $Chemistry );
+           $grade = $Sum / 5;
+           if($grade >= 60){ 
+             echo "First Division";
+           } elseif($grade >= 45 && $grade <=59 ) {
+             echo "Second Division"; 
+            } elseif($grade >= 33 && $grade <=44 ) {
+             echo "Third Division";
+             } else {
+             echo "Fail"; 
+            }
+      }
+      studentGrade(90,0,90,90,100);
     ?>
 
 </body>
