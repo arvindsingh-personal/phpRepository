@@ -22,8 +22,10 @@
     $a = 5;
     $b = 10;
     echo $a + $b;
-
-     
+    ?><br>
+    <?php
+    $text = "PHP";
+    echo "Welcome to the $text World";
     ?>
 </body>
 </html>
