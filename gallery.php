@@ -12,6 +12,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <?php
    
       if(isset($_POST['Submit'])) {
@@ -22,18 +23,19 @@
           $fileSize = $_FILES['file']['size'];
           $fileError = $_FILES['file']['error'];
           $fileType = $_FILES['file']['type'];
-
+        // print_r($file);
           $fileExt = explode('.', $fileName);
           $fileActualExt = strtolower(end($fileExt));
 
           //$allowed = array('jpg', 'jpeg', 'png','pdf');
           $fileNameNew = uniqid('', true).".".$fileActualExt;
                      $fileDestination = 'uploads/'.basename($fileNameNew );
-                     move_uploaded_file($fileTmpName, $fileDestination);
+                     if(move_uploaded_file($fileTmpName, $fileDestination))
+                     {
         //   $_SESSION['images']= $fileDestination;
         array_push($_SESSION['images'], $fileDestination);
       }
-
+    }
     ?>
 
     <form action="#" method="POST" enctype="multipart/form-data">
@@ -42,11 +44,16 @@
     </form>
      <div>
          <?php
+         if(!empty($_SESSION['images'])) {
+           //echo count($_SESSION['images']);
          foreach($_SESSION['images'] as $store) {?>
              <img alt="image" src="<?php echo $store ?>" width=130px; height=130px  >
-        <?php } ?>
+        <?php } 
+        
+      }?>
          
      </div>
+     <a href="destroy.php">To destroy the session</a>
    
 </body>
 </html>
