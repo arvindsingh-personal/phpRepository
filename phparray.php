@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+    
     // Write a PHP script that inserts a new item in an array in any position
       $num = array(1,2,3,4,5);
       $numlength = count($num);
