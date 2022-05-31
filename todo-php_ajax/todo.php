@@ -3,9 +3,7 @@
     if(!isset($_SESSION['todo'])) {
         $_SESSION['todo'] = array();
     }
-    // if(!isset($_SESSION['incomplete'])) {
-    //     $_SESSION['incomplete'] = array();
-    // }
+    
     if(!isset($_SESSION['completed'])) {
         $_SESSION['completed'] = array();
     }
@@ -44,8 +42,6 @@
             function displayCompleted(Tasks) {
                 completed = JSON.parse(Tasks);
 
-                // console.log("Comp: "+completed);
-                // console.log(completed.length);
                 if(completed.length > 0) {
                     text = "";
                    
@@ -121,14 +117,7 @@
                         displayCompleted(result);
                     }        
                 });
-                // $.ajax({
-                //     url:'server.php',
-                //     type:'POST',
-                //     data:{'id1':id2},
-                //     success:function(Tasks){
-                //             displayTodo(Tasks);
-                //     }
-                // });
+                
             });
             $('#incomplete-tasks').on('click', '.delete', function(){
                 id = $(this).parent()[0].id;
