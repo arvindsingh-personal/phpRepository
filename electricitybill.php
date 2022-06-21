@@ -23,22 +23,25 @@
           }   
       }
 
-      function test_input($data) {
+       function test_input($data) {
           $data = trim($data);
           $data = stripslashes($data);
           return $data;
-      }
+       }
+
        $result = calculate($unit);
        function  calculate($data) {
-          
           if($data >0 && $data <=50)
             $result = $data * 3.5;
+
           elseif($data >50 && $data <=150) {
-              $result = ($data*4) + (50*3.5) ;}
+              $result = (($data-50)*4) + (50*3.5) ;}
+
           elseif($data >150 && $data<=250) 
-              $result = ( 50 * 3.5 )+( 100 * 4 )+( $data * 5.2 );
+              $result = ( 50 * 3.5 )+( 100 * 4 )+( (($data-150) - 150) * 5.2 );
+
           elseif($data > 250 )
-             $result = ( 50 * 3.5 )+( 100 * 4 )+( 100 * 5.2 ) + ($data * 6.5) ;
+             $result = ( 50 * 3.5 )+( 100 * 4 )+( 100 * 5.2 ) + (($data-250) * 6.5) ;
 
           return $result;
           }
@@ -48,7 +51,7 @@
     <h2>Electricity Bill</h2>
     <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-        Units:  <input type="text" name= "unit" value="<?php echo $unit; ?>" placeholder="Enter consumed units">
+        Units:  <input type="text" name="unit" value="<?php echo $unit; ?>" placeholder="Enter consumed units">
                 <span class="error">*<?php echo $unitErr; ?><br><br>
                 <input type="submit" value="Submit">
     </span>
@@ -59,7 +62,7 @@
     ?>
 
         
-
+ 
     </form>
 </body>
 </html>
