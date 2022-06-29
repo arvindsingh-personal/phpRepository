@@ -1,0 +1,54 @@
+.div1 a {
+    color:rgb(40, 39, 39);
+    text-decoration: none;
+}
+.div1 a:hover {
+    color:rgb(88, 182, 162);
+}
+/* 
+li a:hover
+{
+    text-decoration: none;
+    background-color:gray;
+    transition: 3s;
+  
+} */
+
+.navbar.container-fluid.navbar-collapse li a {
+    color: red;
+}
+
+#plus {
+    color: white;
+    font-size: 200%;
+    text-decoration: none;
+    position: fixed;
+    bottom: 25.5%;
+    right: 0.3%;
+    border-radius: 50%;
+    background-color: #F9564F;
+    padding: 1.6%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    transition: transform 0.5s ease;
+  }
+
+.card .div1 .content .lead{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    text-decoration: none;
+    display: -webkit-box;
+    max-width: 300px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.card .div1 .profile i {
+    color: gray;
+
+}
+
